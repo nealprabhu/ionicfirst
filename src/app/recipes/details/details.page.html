@@ -1,0 +1,118 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button slot= "start">
+      <ion-back-button defaultHref ="/recipes"></ion-back-button>
+    </ion-button>
+    <ion-title> {{loadedDetails.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+    <ion-col>
+        <ion-img [src]= "loadedDetails.imageUrl"> </ion-img>
+    </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1 text-center>{{loadedDetails.title}}
+        </h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item *ngFor="let special of loadedDetails.specialization">
+          {{special}}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+          <ion-card  color="medium">
+              <ion-card-header>
+                <ion-card-title>Shift Details </ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                  <ion-item>
+                      <ion-label position="floating">Department</ion-label>
+                      <ion-input type ="text" id ="input-expence"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                      <ion-label position="floating">Total hours</ion-label>
+                      <ion-input type ="number" id ="input-amount"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label> From Date</ion-label>
+                    <ion-datetime display-format="MMM DD, YYYY HH:mm"></ion-datetime>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label> To Date</ion-label>
+                    <ion-datetime display-format="MMM DD, YYYY HH:mm"></ion-datetime>
+                  </ion-item>
+                  <div text-right> 
+                      <ion-button> <ion-icon slot= "start" name="add"  id ="btn-add" (click)='onClickFuntion($event)'></ion-icon>Add Expense</ion-button>
+                      <ion-button fill = 'outline' color="danger" id ="btn-clr"> <ion-icon  slot= "start" name="close"></ion-icon>Clear</ion-button>
+                </div>
+                  </ion-card-content>
+                  
+                  
+            </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
+<!-- 
+ <ion-header>
+      <ion-toolbar color="secondary">
+          <ion-button slot= "start" color="secondary">
+              <ion-back-button defaultHref ="/recipes" [text]="buttonText" [icon]="buttonIcon"></ion-back-button>
+            </ion-button>
+        <ion-title>Shift Planner </ion-title>
+        </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col size-md="6" offset-md="3">
+            <ion-card  color="medium">
+                <ion-card-header>
+                  <ion-card-title>Shift Details </ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                    <ion-item>
+                        <ion-label position="floating">Department</ion-label>
+                        <ion-input type ="text" id ="input-expence"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label position="floating">Total hours</ion-label>
+                        <ion-input type ="number" id ="input-amount"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label> From Date</ion-label>
+                      <ion-datetime display-format="MMM DD, YYYY HH:mm"></ion-datetime>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label> To Date</ion-label>
+                      <ion-datetime display-format="MMM DD, YYYY HH:mm"></ion-datetime>
+                    </ion-item>
+                    <div text-right> 
+                        <ion-button> <ion-icon slot= "start" name="add"  id ="btn-add" (click)='onClickFuntion($event)'></ion-icon>Add Expense</ion-button>
+                        <ion-button fill = 'outline' color="danger" id ="btn-clr"> <ion-icon  slot= "start" name="close"></ion-icon>Clear</ion-button>
+                  </div>
+                    </ion-card-content>
+                    
+                    
+              </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+      
+  </ion-content> -->

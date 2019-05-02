@@ -1,0 +1,68 @@
+<!-- <ion-app>
+  <ion-split-pane>
+    <ion-menu>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app> -->
+
+<!-- <ion-app>
+  <ion-header>
+      <ion-toolbar color="secondary">
+        <ion-title>Budget Planner </ion-title>
+        </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col size-md="6" offset-md="3">
+            <ion-card  color="medium">
+                <ion-card-header>
+                  <ion-card-title>Expense Details        </ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                    <ion-item>
+                        <ion-label position="floating">Expence Reason</ion-label>
+                        <ion-input type ="text" id ="input-expence"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label position="floating">Expence Amount</ion-label>
+                        <ion-input type ="number" id ="input-amount"></ion-input>
+                    </ion-item>
+                    <div text-right> 
+                        <ion-button> <ion-icon slot= "start" name="add"  id ="btn-add" (click)='onClickFuntion($event)'></ion-icon>Add Expense</ion-button>
+                        <ion-button fill = 'outline' color="danger" id ="btn-clr"> <ion-icon  slot= "start" name="close"></ion-icon>Clear</ion-button>
+                  </div>
+                    </ion-card-content>
+                    
+                    
+              </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+      
+  </ion-content>
+</ion-app> -->
+
+
+<ion-app>
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>
